@@ -36,16 +36,14 @@ class ReviewView(ViewSet):
         
     
     def update(self, request, pk):
-        """Update a product"""
-        category = Reviews.objects.get(pk=request.data['content'])
+        
+        review = Reviews.objects.get(pk=pk)
+        review.content = request.data["content"]
+        review.campsite = request.data["campsite"]
+        
 
-        try:
-            review = Reviews.objects.get(
-                pk=pk, campsite=request.auth.user)
-            review.content = request.data['content']
-            review.save()
-            return Response(None, status=status.HTTP_204_NO_CONTENT)
-        except ValidationError as ex:
-            return Response({'message': ex.args[0]}, status=status.HTTP_400_BAD_REQUEST)
-        except Reviews.DoesNotExist as ex:
-            return Response({'message': ex.args[0]}, status=status.HTTP_404_NOT_FOUND)
+        reviews = Reviews.objects.get(pk=request.data["content"])
+        reviews.content = review
+        reviews.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
