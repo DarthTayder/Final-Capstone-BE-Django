@@ -1,0 +1,175 @@
+[
+    {
+      "model": "auth.user",
+      "pk": 1,
+      "fields": {
+        "password": "pbkdf2_sha256$320000$dv70XGQf1H15T9HKi2BdrP$q/7uKKMhBh3eM0qumiw3ogYoGacWv1LLbDyTroV4JYg=",
+        "last_login": "2022-05-17T15:49:31Z",
+        "is_superuser": false,
+        "username": "larry",
+        "first_name": "",
+        "last_name": "",
+        "email": "",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2022-05-17T15:46:57Z",
+        "groups": [],
+        "user_permissions": []
+      }
+    },
+    {
+      "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$ueQB32UbHElJIlqFRaHXN2$iUXKRSRnbGEeIWiARtqTdcL5o4xZCfdUIJQgOnwo0do=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "moe",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-17T17:00:00.260Z",
+      "groups": [],
+      "user_permissions": []
+    }
+    },
+    {
+      "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$320000$co2VxPZJV6psEDxBi8kinx$CcECo7sxXXNPYI/oDAumTXj11z/a+97DgC2zhP+ivZM=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "curly",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2022-05-17T17:00:41.170Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  
+  {
+    "model": "app_api.poi",
+    "pk": 1,
+    "fields": {
+      "name" : "poi 1"
+    }
+  },
+  {
+    "model": "app_api.poi",
+    "pk": 2,
+    "fields": {
+      "name" : "poi 2"
+    }
+  },
+  {
+    "model": "app_api.poi",
+    "pk": 3,
+    "fields": {
+      "name" : "poi 3"
+    }
+  },
+    {
+      "model": "app_api.campsites",
+      "pk": 1,
+      "fields": {
+        "name" : "Campsite 1",
+        "address": "123 Road Dr, Nashville, TN 37201",
+        "poi": 1,
+        "user": 1
+      }
+    },
+    {
+      
+      "model": "app_api.campsites",
+      "pk": 2,
+      "fields": {
+        "name" : "Campsite 2",
+        "address": "321 Colt Dr, Nashville, TN 37201",
+        "poi": 2,
+        "user": 2
+      }
+    },
+    {
+  
+      "model": "app_api.campsites",
+      "pk": 3,
+      "fields": {
+        "name" : "Campsite 3",
+        "address": "123 Vanner Rd, Nashville, TN 37201",
+        "poi": 3,
+        "user": 3
+      }
+  
+    },
+    {
+      "model": "app_api.reviews",
+      "pk": 1,
+      "fields": {
+        "content" : "Great Place, would stay again",
+        "campsite": 1,
+        "user": 1
+      }
+    },
+    {
+      "model": "app_api.reviews",
+      "pk": 2,
+      "fields": {
+        "content" : "I do not like this place.",
+        "campsite": 2,
+        "user": 1
+      }
+    },
+    {
+      "model": "app_api.reviews",
+      "pk": 3,
+      "fields": {
+        "content" : "Its okay.",
+        "campsite": 3,
+        "user": 1
+      }
+    },
+    {
+      "model": "app_api.userlist",
+      "pk": 1,
+      "fields": {
+        
+        "user": 1,
+        "campsiteId": 1
+      }
+    },
+    {
+      "model": "app_api.userlist",
+      "pk": 2,
+      "fields": {
+        
+        "user": 1,
+        "campsiteId": 2
+      }
+    },
+    {
+      "model": "app_api.userlist",
+      "pk": 3,
+      "fields": {
+        
+        "user": 1,
+        "campsiteId": 1
+      }
+    },
+    
+      {
+          "model": "authtoken.token",
+          "pk": "fa2eba9be8282d595c997ee5cd49f2ed31f65bed",
+          "fields": {
+              "user": 1,
+              "created": "2020-08-29T13:24:27.172Z"
+          }
+      }
+  
+]
