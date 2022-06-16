@@ -39,11 +39,7 @@ class ReviewView(ViewSet):
         
         review = Reviews.objects.get(pk=pk)
         review.content = request.data["content"]
-        review.campsite = request.data["campsite"]
-        
-
-        reviews = Reviews.objects.get(pk=request.data["content"])
-        reviews.content = review
-        reviews.save()
+        review.campsite_id = request.data["campsite"]
+        review.save()
 
         return Response(None, status=status.HTTP_204_NO_CONTENT)
